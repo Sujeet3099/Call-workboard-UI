@@ -5,6 +5,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Divider, IconButton, Typography, Drawer } from '@material-ui/core';
 import './navbar.css';
 import logo from '../logo.svg';
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const handleDrawerOpen = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
                 <Divider style={{ color: '#fff' }} />
               </IconButton>
             </div>
-            <div className="navbar__mid" onClick={handleDrawerClose}>
+            <div className="navbar__mid" onClick={handleDrawerClose} aria-hidden="true">
               <ArrowBackIcon />
               <span style={{ paddingLeft: '1rem' }}>Switch Back to Enterprise UI</span>
             </div>
@@ -52,7 +53,9 @@ const Navbar = () => {
               <img src={logo} alt="" className="navbar__user__img" />
               <span style={{ fontSize: '1.25rem' }}>User Name</span>
             </div>
-            <button className="navbar__btn">Logout</button>
+            <button className="navbar__btn" type="button">
+              Logout
+            </button>
           </div>
         </div>
       </Drawer>
