@@ -40,8 +40,7 @@
 .navbar__user__img {
   width: 2rem;
   height: 2rem;
-  /* padding-left: 1rem; */
-  margin-right: 1rem;
+  margin: auto;
   color: #000;
   border-radius: 50%;
   background-color: #000;

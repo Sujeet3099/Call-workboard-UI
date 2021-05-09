@@ -2,7 +2,16 @@
 import React, { useState } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { Divider, IconButton, Typography, Drawer } from '@material-ui/core';
+import {
+  Divider,
+  IconButton,
+  Typography,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from '@material-ui/core';
 import './navbar.css';
 import logo from '../logo.svg';
 
@@ -38,10 +47,20 @@ const Navbar = () => {
                 <Divider style={{ color: '#fff' }} />
               </IconButton>
             </div>
-            <div className="navbar__mid" onClick={handleDrawerClose} aria-hidden="true">
+            <List>
+              <ListItem onClick={handleDrawerClose}>
+                <ListItemIcon>
+                  <ArrowBackIcon style={{ color: '#fff' }} />
+                </ListItemIcon>
+                <ListItemText>
+                  <span style={{ paddingLeft: '1rem' }}>Switch Back to Enterprise UI</span>
+                </ListItemText>
+              </ListItem>
+            </List>
+            {/* <div className="navbar__mid" onClick={handleDrawerClose} aria-hidden="true">
               <ArrowBackIcon />
               <span style={{ paddingLeft: '1rem' }}>Switch Back to Enterprise UI</span>
-            </div>
+            </div> */}
           </div>
           <div className="navbar__bottom">
             <div
